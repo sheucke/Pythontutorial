@@ -17,6 +17,25 @@ class Point():
     def __mul__(self, p):
         return self.x * p.x + self.y * p.y
 
+    def lenght(self):
+        import math
+        return math.sqrt(self.x**2 + self.y**2)
+
+    def __gt__(self, p):    # greater then
+        return self.lenght() > p.lenght()
+
+    def __ge__(self, p):
+        return self.lenght() >= p.lenght()  # greater equal to
+
+    def __lt__(self, p):
+        return self.lenght() < p.lenght()  # less than
+
+    def __le__(self, p):
+        return self.lenght() <= p.lenght()  # less than equal to
+
+    def __eq__(self, p):
+        return self.x == p.x and self.y == p.y  # equal to
+
     def __str__(self):
         return "(" + str(self.x) + ',' + str(self.y) + ')'
 
@@ -30,3 +49,6 @@ p6 = p4 - p1
 p7 = p2 * p3
 
 print(p5, p6, p7)
+print(p1 == p2)
+print(p1 > p2)
+print(p1 <= p2)
