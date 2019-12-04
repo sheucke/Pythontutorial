@@ -23,6 +23,7 @@ for i, el in enumerate(l):
 lookingFor in l
 lookingFor in s  # O(1)
 
+# fast check for duplicates by using sets
 s = [1, 1, 1, 13, 4, 6, 5]
 dup = len(set(s)) == len(s)
 print(dup)
